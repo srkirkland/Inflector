@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inflector", "Inflector\Inflector.csproj", "{D5677360-4354-4BA3-9E23-DB169C22BEAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inflector.Tests", "Inflector.Tests\Inflector.Tests.csproj", "{48D42B49-DAA7-47BB-9DC2-9BF2013C48C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{D5677360-4354-4BA3-9E23-DB169C22BEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5677360-4354-4BA3-9E23-DB169C22BEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5677360-4354-4BA3-9E23-DB169C22BEAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48D42B49-DAA7-47BB-9DC2-9BF2013C48C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D42B49-DAA7-47BB-9DC2-9BF2013C48C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D42B49-DAA7-47BB-9DC2-9BF2013C48C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D42B49-DAA7-47BB-9DC2-9BF2013C48C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
