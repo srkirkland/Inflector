@@ -49,12 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapitalizeTests.cs" />
+    <Compile Include="DasherizeTests.cs" />
     <Compile Include="HumanizeTests.cs" />
+    <Compile Include="OrdinalizeTests.cs" />
     <Compile Include="PascalizeAndCamelizeTests.cs" />
     <Compile Include="PluralizeTests.cs" />
     <Compile Include="InflectorTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TitleizeTests.cs" />
+    <Compile Include="UncapitalizeTests.cs" />
     <Compile Include="UnderscoreTests.cs" />
   </ItemGroup>
   <ItemGroup>
