@@ -10,7 +10,7 @@ namespace Inflector.Tests
         {
             foreach (var pair in TestData)
             {
-                Assert.AreEqual(Inflector.Ordinalize(pair.Key), pair.Value);
+                Assert.AreEqual(pair.Key.Ordinalize(), pair.Value);
             }
         }
 

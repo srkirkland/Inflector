@@ -117,12 +117,12 @@ namespace Inflector
         private static readonly List<Rule> _singulars = new List<Rule>();
         private static readonly List<string> _uncountables = new List<string>();
 
-        public static string Pluralize(string word)
+        public static string Pluralize(this string word)
         {
             return ApplyRules(_plurals, word);
         }
 
-        public static string Singularize(string word)
+        public static string Singularize(this string word)
         {
             return ApplyRules(_singulars, word);
         }
@@ -145,7 +145,7 @@ namespace Inflector
             return result;
         }
 
-        public static string Titleize(string word)
+        public static string Titleize(this string word)
         {
             return Regex.Replace(Humanize(Underscore(word)), @"\b([a-z])",
                                  delegate(Match match)
@@ -154,12 +154,12 @@ namespace Inflector
                                  });
         }
 
-        public static string Humanize(string lowercaseAndUnderscoredWord)
+        public static string Humanize(this string lowercaseAndUnderscoredWord)
         {
             return Capitalize(Regex.Replace(lowercaseAndUnderscoredWord, @"_", " "));
         }
 
-        public static string Pascalize(string lowercaseAndUnderscoredWord)
+        public static string Pascalize(this string lowercaseAndUnderscoredWord)
         {
             return Regex.Replace(lowercaseAndUnderscoredWord, "(?:^|_)(.)",
                                  delegate(Match match)
@@ -168,12 +168,12 @@ namespace Inflector
                                  });
         }
 
-        public static string Camelize(string lowercaseAndUnderscoredWord)
+        public static string Camelize(this string lowercaseAndUnderscoredWord)
         {
             return Uncapitalize(Pascalize(lowercaseAndUnderscoredWord));
         }
 
-        public static string Underscore(string pascalCasedWord)
+        public static string Underscore(this string pascalCasedWord)
         {
             return Regex.Replace(
                 Regex.Replace(
@@ -181,17 +181,17 @@ namespace Inflector
                     "$1_$2"), @"[-\s]", "_").ToLower();
         }
 
-        public static string Capitalize(string word)
+        public static string Capitalize(this string word)
         {
             return word.Substring(0, 1).ToUpper() + word.Substring(1).ToLower();
         }
 
-        public static string Uncapitalize(string word)
+        public static string Uncapitalize(this string word)
         {
             return word.Substring(0, 1).ToLower() + word.Substring(1);
         }
 
-        public static string Ordinalize(string number)
+        public static string Ordinalize(this string number)
         {
             int n = int.Parse(number);
             int nMod100 = n % 100;
@@ -214,7 +214,7 @@ namespace Inflector
             }
         }
 
-        public static string Dasherize(string underscoredWord)
+        public static string Dasherize(this string underscoredWord)
         {
             return underscoredWord.Replace('_', '-');
         }

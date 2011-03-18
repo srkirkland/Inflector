@@ -10,7 +10,7 @@ namespace Inflector.Tests
         {
             foreach (var pair in TestData)
             {
-                Assert.AreEqual(Inflector.Pascalize(pair.Key), pair.Value);
+                Assert.AreEqual(pair.Key.Pascalize(), pair.Value);
             }
         }
 
@@ -23,7 +23,7 @@ namespace Inflector.Tests
             foreach (var pair in TestData)
             {
                 var lowercaseFirstChar = pair.Value.Substring(0, 1).ToLower() + pair.Value.Substring(1);
-                Assert.AreEqual(Inflector.Camelize(pair.Key), lowercaseFirstChar);
+                Assert.AreEqual(pair.Key.Camelize(), lowercaseFirstChar);
             }
         }
 
