@@ -12,10 +12,10 @@ namespace Inflector
             AddPlural("$", "s");
             AddPlural("s$", "s");
             AddPlural("(ax|test)is$", "$1es");
-            AddPlural("(octop|vir)us$", "$1i");
+            AddPlural("(octop|vir|alumn|fung)us$", "$1i");
             AddPlural("(alias|status)$", "$1es");
             AddPlural("(bu)s$", "$1ses");
-            AddPlural("(buffal|tomat)o$", "$1oes");
+            AddPlural("(buffal|tomat|volcan)o$", "$1oes");
             AddPlural("([ti])um$", "$1a");
             AddPlural("sis$", "ses");
             AddPlural("(?:([^f])fe|([lr])f)$", "$1$2ves");
@@ -45,7 +45,7 @@ namespace Inflector
             AddSingular("(o)es$", "$1");
             AddSingular("(shoe)s$", "$1");
             AddSingular("(cris|ax|test)es$", "$1is");
-            AddSingular("(octop|vir)i$", "$1us");
+            AddSingular("(octop|vir|alumn|fung)i$", "$1us");
             AddSingular("(alias|status)es$", "$1");
             AddSingular("^(ox)en", "$1");
             AddSingular("(vert|ind)ices$", "$1ex");
@@ -57,6 +57,8 @@ namespace Inflector
             AddIrregular("child", "children");
             AddIrregular("sex", "sexes");
             AddIrregular("move", "moves");
+            AddIrregular("goose", "geese");
+            AddIrregular("alumna", "alumnae");
 
             AddUncountable("equipment");
             AddUncountable("information");
@@ -66,6 +68,8 @@ namespace Inflector
             AddUncountable("series");
             AddUncountable("fish");
             AddUncountable("sheep");
+            AddUncountable("deer");
+            AddUncountable("aircraft");
         }
 
         #endregion

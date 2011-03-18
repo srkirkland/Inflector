@@ -119,6 +119,17 @@ namespace Inflector.Tests
             TestData.Add("horse", "horses");
             TestData.Add("prize", "prizes");
             TestData.Add("edge", "edges");
+
+            /* Tests added by Bas Jansen */
+            TestData.Add("goose", "geese");
+            TestData.Add("deer", "deer");
+            TestData.Add("sheep", "sheep");
+            TestData.Add("wolf", "wolves");
+            TestData.Add("volcano", "volcanoes");
+            TestData.Add("aircraft", "aircraft");
+            TestData.Add("alumna", "alumnae");
+            TestData.Add("alumnus", "alumni");
+            TestData.Add("fungus", "fungi");
         }
     }
 }
