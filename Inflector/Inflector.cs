@@ -195,28 +195,38 @@ namespace Inflector
             return word.Substring(0, 1).ToLower() + word.Substring(1);
         }
 
-        public static string Ordinalize(this string number)
+        public static string Ordinalize(this string numberString)
         {
-            int n = int.Parse(number);
-            int nMod100 = n % 100;
+            return Ordanize(int.Parse(numberString), numberString);
+        }
+
+        public static string Ordinalize(this int number)
+        {
+            return Ordanize(number, number.ToString());
+        }
+
+        private static string Ordanize(int number, string numberString)
+        {
+            int nMod100 = number % 100;
 
             if (nMod100 >= 11 && nMod100 <= 13)
             {
-                return number + "th";
+                return numberString + "th";
             }
 
-            switch (n % 10)
+            switch (number % 10)
             {
                 case 1:
-                    return number + "st";
+                    return numberString + "st";
                 case 2:
-                    return number + "nd";
+                    return numberString + "nd";
                 case 3:
-                    return number + "rd";
+                    return numberString + "rd";
                 default:
-                    return number + "th";
+                    return numberString + "th";
             }
         }
+
 
         public static string Dasherize(this string underscoredWord)
         {
